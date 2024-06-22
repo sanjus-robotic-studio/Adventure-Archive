@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  Adventure Archive
+//
+//  Created by Sanjiv Anand on 22/06/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SUPABASE_URL = "https://yppdruwanhkzcwkgozig.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwcGRydXdhbmhremN3a2dvemlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTkwNDQ5NzEsImV4cCI6MjAzNDYyMDk3MX0.QMNMbY18r4z0II_9e_YeVF26t6oe-KqvE8EIomCTUMY"
