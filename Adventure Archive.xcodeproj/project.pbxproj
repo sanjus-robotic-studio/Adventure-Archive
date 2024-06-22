@@ -15,6 +15,15 @@
 		78F39A292C26C3440096A6CB /* Adventure_ArchiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A282C26C3440096A6CB /* Adventure_ArchiveTests.swift */; };
 		78F39A332C26C3440096A6CB /* Adventure_ArchiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A322C26C3440096A6CB /* Adventure_ArchiveUITests.swift */; };
 		78F39A352C26C3440096A6CB /* Adventure_ArchiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A342C26C3440096A6CB /* Adventure_ArchiveUITestsLaunchTests.swift */; };
+		78F39A432C26C5200096A6CB /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A422C26C5200096A6CB /* Auth */; };
+		78F39A452C26C5200096A6CB /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A442C26C5200096A6CB /* Functions */; };
+		78F39A472C26C5200096A6CB /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A462C26C5200096A6CB /* PostgREST */; };
+		78F39A492C26C5200096A6CB /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A482C26C5200096A6CB /* Realtime */; };
+		78F39A4B2C26C5200096A6CB /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A4A2C26C5200096A6CB /* Storage */; };
+		78F39A4D2C26C5880096A6CB /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 78F39A4C2C26C5880096A6CB /* Config.xcconfig */; };
+		78F39A4F2C26C63B0096A6CB /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A4E2C26C63B0096A6CB /* SupabaseManager.swift */; };
+		78F39A512C26C7850096A6CB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A502C26C7850096A6CB /* LoginView.swift */; };
+		78F39A542C26F6E80096A6CB /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 78F39A532C26F6E80096A6CB /* Supabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +55,9 @@
 		78F39A2E2C26C3440096A6CB /* Adventure ArchiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Adventure ArchiveUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F39A322C26C3440096A6CB /* Adventure_ArchiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventure_ArchiveUITests.swift; sourceTree = "<group>"; };
 		78F39A342C26C3440096A6CB /* Adventure_ArchiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventure_ArchiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78F39A4C2C26C5880096A6CB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		78F39A4E2C26C63B0096A6CB /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
+		78F39A502C26C7850096A6CB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F39A472C26C5200096A6CB /* PostgREST in Frameworks */,
+				78F39A452C26C5200096A6CB /* Functions in Frameworks */,
+				78F39A542C26F6E80096A6CB /* Supabase in Frameworks */,
+				78F39A432C26C5200096A6CB /* Auth in Frameworks */,
+				78F39A4B2C26C5200096A6CB /* Storage in Frameworks */,
+				78F39A492C26C5200096A6CB /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +98,7 @@
 				78F39A272C26C3440096A6CB /* Adventure ArchiveTests */,
 				78F39A312C26C3440096A6CB /* Adventure ArchiveUITests */,
 				78F39A132C26C33C0096A6CB /* Products */,
+				78F39A522C26F6E80096A6CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,9 @@
 				78F39A192C26C33C0096A6CB /* Item.swift */,
 				78F39A1B2C26C3420096A6CB /* Assets.xcassets */,
 				78F39A1D2C26C3420096A6CB /* Preview Content */,
+				78F39A4C2C26C5880096A6CB /* Config.xcconfig */,
+				78F39A4E2C26C63B0096A6CB /* SupabaseManager.swift */,
+				78F39A502C26C7850096A6CB /* LoginView.swift */,
 			);
 			path = "Adventure Archive";
 			sourceTree = "<group>";
@@ -130,6 +152,13 @@
 			path = "Adventure ArchiveUITests";
 			sourceTree = "<group>";
 		};
+		78F39A522C26F6E80096A6CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +175,14 @@
 			dependencies = (
 			);
 			name = "Adventure Archive";
+			packageProductDependencies = (
+				78F39A422C26C5200096A6CB /* Auth */,
+				78F39A442C26C5200096A6CB /* Functions */,
+				78F39A462C26C5200096A6CB /* PostgREST */,
+				78F39A482C26C5200096A6CB /* Realtime */,
+				78F39A4A2C26C5200096A6CB /* Storage */,
+				78F39A532C26F6E80096A6CB /* Supabase */,
+			);
 			productName = "Adventure Archive";
 			productReference = 78F39A122C26C33C0096A6CB /* Adventure Archive.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 78F39A092C26C33C0096A6CB;
+			packageReferences = (
+				78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 78F39A132C26C33C0096A6CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F39A1F2C26C3420096A6CB /* Preview Assets.xcassets in Resources */,
+				78F39A4D2C26C5880096A6CB /* Config.xcconfig in Resources */,
 				78F39A1C2C26C3420096A6CB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +304,8 @@
 				78F39A182C26C33C0096A6CB /* ContentView.swift in Sources */,
 				78F39A1A2C26C33C0096A6CB /* Item.swift in Sources */,
 				78F39A162C26C33C0096A6CB /* Adventure_ArchiveApp.swift in Sources */,
+				78F39A512C26C7850096A6CB /* LoginView.swift in Sources */,
+				78F39A4F2C26C63B0096A6CB /* SupabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +635,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78F39A422C26C5200096A6CB /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		78F39A442C26C5200096A6CB /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		78F39A462C26C5200096A6CB /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		78F39A482C26C5200096A6CB /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		78F39A4A2C26C5200096A6CB /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		78F39A532C26F6E80096A6CB /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78F39A412C26C5200096A6CB /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 78F39A0A2C26C33C0096A6CB /* Project object */;
 }
