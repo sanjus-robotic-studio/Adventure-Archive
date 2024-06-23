@@ -12,6 +12,7 @@ struct LoginView: View {
   @State var email = ""
   @State var password = ""
   @State var isLoading = false
+  @State var isRegistrationPresented = false
   @State var result: Result<Void, Error>?
 
     var body: some View {
@@ -60,7 +61,7 @@ struct LoginView: View {
                     ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
                         
                     
-                        if email.isEmpty{
+                        if password.isEmpty{
                             Text("Password")
                                 .foregroundColor(.teal)
                                 .font(.title3)
@@ -112,6 +113,9 @@ struct LoginView: View {
                             Text("Sign Up Here")
                                 .foregroundColor(.teal)
                         }
+                        .sheet(isPresented: $isRegistrationPresented, content: {
+                            SignUpView()
+                        })
 
                     }
                 
