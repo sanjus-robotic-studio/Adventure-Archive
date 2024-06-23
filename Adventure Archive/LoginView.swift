@@ -9,11 +9,16 @@ import SwiftUI
 import Supabase
 
 struct LoginView: View {
+  @Environment(\.dismiss) var dismiss
+  @EnvironmentObject var viewModal: LoginViewModal
+    
   @State var email = ""
   @State var password = ""
   @State var isLoading = false
   @State var isRegistrationPresented = false
   @State var result: Result<Void, Error>?
+    
+  @Binding var appUser: AppUser?
 
     var body: some View {
         NavigationStack{
@@ -86,8 +91,15 @@ struct LoginView: View {
                         
                     })
                     Button {
-                        isLoading.toggle()
-                    } 
+                        Task{
+                            do{
+                              let appUser = try await viewModal.signUp(email: email, password: password)
+                                self.appUser = appUser
+                            } catch{
+                                print("issue with SignIn")
+                            }
+                        }
+                    }
                     
                 label: {
                         Text("Login")
@@ -108,13 +120,14 @@ struct LoginView: View {
                     HStack{
                         Text("New User?")
                         Button {
-                            
+                            isRegistrationPresented.toggle()
                         } label: {
                             Text("Sign Up Here")
                                 .foregroundColor(.teal)
                         }
                         .sheet(isPresented: $isRegistrationPresented, content: {
-                            SignUpView()
+                            SignUpView(appUser: $appUser)
+                                .environmentObject(viewModal)
                         })
 
                     }
@@ -127,8 +140,4 @@ struct LoginView: View {
             }
         }
     }
-}
-
-#Preview {
-    LoginView()
 }

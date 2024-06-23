@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78CAD7152C2835BE00DD087F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAD7142C2835BE00DD087F /* SignUpView.swift */; };
+		78CAD7172C28527900DD087F /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAD7162C28527900DD087F /* LoginViewModal.swift */; };
 		78F39A162C26C33C0096A6CB /* Adventure_ArchiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A152C26C33C0096A6CB /* Adventure_ArchiveApp.swift */; };
 		78F39A182C26C33C0096A6CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A172C26C33C0096A6CB /* ContentView.swift */; };
 		78F39A1A2C26C33C0096A6CB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A192C26C33C0096A6CB /* Item.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		78CAD7142C2835BE00DD087F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		78CAD7162C28527900DD087F /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
 		78F39A122C26C33C0096A6CB /* Adventure Archive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adventure Archive.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F39A152C26C33C0096A6CB /* Adventure_ArchiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventure_ArchiveApp.swift; sourceTree = "<group>"; };
 		78F39A172C26C33C0096A6CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				78F39A502C26C7850096A6CB /* LoginView.swift */,
 				78F39A552C2713310096A6CB /* WelcomeVIew.swift */,
 				78CAD7142C2835BE00DD087F /* SignUpView.swift */,
+				78CAD7162C28527900DD087F /* LoginViewModal.swift */,
 			);
 			path = "Adventure Archive";
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CAD7172C28527900DD087F /* LoginViewModal.swift in Sources */,
 				78F39A182C26C33C0096A6CB /* ContentView.swift in Sources */,
 				78F39A1A2C26C33C0096A6CB /* Item.swift in Sources */,
 				78F39A162C26C33C0096A6CB /* Adventure_ArchiveApp.swift in Sources */,

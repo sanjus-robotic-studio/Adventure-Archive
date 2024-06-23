@@ -10,10 +10,10 @@ import SwiftData
 
 @main
 struct Adventure_ArchiveApp: App {
-
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            WelcomeView(appUser: .constant(.init(uid: "1234", email: nil)) )
+                .environmentObject(LoginViewModal())
         }
         
     }

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct WelcomeVIew: View {
+struct WelcomeView: View {
+    @Binding var appUser: AppUser?
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -29,7 +31,7 @@ struct WelcomeVIew: View {
                     Spacer()
                     
                     
-                    NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination: LoginView(appUser:$appUser).navigationBarBackButtonHidden(true)) {
                         Text("Get Started")
                             .foregroundColor(.teal)
                             .font(.title3)
@@ -71,6 +73,3 @@ extension Color {
     }
 }
 
-#Preview {
-    WelcomeVIew()
-}

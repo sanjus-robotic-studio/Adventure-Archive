@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var viewModal: LoginViewModal
+    
     @State var email = ""
     @State var password = ""
     @State var isLoading = false
     @State var isRegistrationPresented = false
-    @State var result: Result<Void, Error>?
+
+    @Binding var appUser: AppUser?
+    
     var body: some View {
         ZStack{
             
@@ -83,7 +89,14 @@ struct SignUpView: View {
                     
                 })
                 Button {
-                    isLoading.toggle()
+                    Task{
+                        do{
+                          let appUser = try await viewModal.signUp(email: email, password: password)
+                            self.appUser = appUser
+                        } catch{
+                            print("issue with SignIn")
+                        }
+                    }
                 }
                 
             label: {
@@ -104,7 +117,7 @@ struct SignUpView: View {
             
                 HStack{
                     Text("Existing User?")
-                    NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination: LoginView(appUser : $appUser).navigationBarBackButtonHidden(true)) {
                             Text("Sign In Here")
                                 .foregroundColor(.teal)
                         
@@ -119,7 +132,3 @@ struct SignUpView: View {
     }
 }
 
-
-#Preview {
-    SignUpView()
-}
