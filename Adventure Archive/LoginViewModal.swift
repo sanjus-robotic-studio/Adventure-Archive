@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class LoginViewModal: ObservableObject {
     func isFormValid(email:String, password: String) -> Bool{
-        guard email.isValidEmail(email), password.count < 7 else{
+        guard email.isValidEmail(), password.count > 7 else{
             return false
         }
         return true
@@ -38,10 +38,9 @@ class LoginViewModal: ObservableObject {
 
 extension String{
     
-    func isValidEmail(_ email: String) -> Bool {
+    func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
+        return emailPred.evaluate(with: self)
     }
 }

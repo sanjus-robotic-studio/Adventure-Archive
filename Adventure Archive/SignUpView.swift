@@ -21,7 +21,7 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack{
-            
+            Color(.white).ignoresSafeArea(.all)
             VStack(spacing: 20, content: {
                 
                 Text("Let's Get You Started")
@@ -132,3 +132,7 @@ struct SignUpView: View {
     }
 }
 
+#Preview {
+    SignUpView(appUser: .constant(.init(uid: "1234", email: nil)) )
+        .environmentObject(LoginViewModal())
+}

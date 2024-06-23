@@ -23,7 +23,7 @@ struct LoginView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                
+                Color(.white).ignoresSafeArea(.all)
                 VStack(spacing: 20, content: {
                     
                     Text("Welcome Back!")
@@ -93,7 +93,7 @@ struct LoginView: View {
                     Button {
                         Task{
                             do{
-                              let appUser = try await viewModal.signUp(email: email, password: password)
+                              let appUser = try await viewModal.signIn(email: email, password: password)
                                 self.appUser = appUser
                             } catch{
                                 print("issue with SignIn")
@@ -140,4 +140,8 @@ struct LoginView: View {
             }
         }
     }
+}
+#Preview {
+    LoginView(appUser: .constant(.init(uid: "1234", email: nil)) )
+        .environmentObject(LoginViewModal())
 }
