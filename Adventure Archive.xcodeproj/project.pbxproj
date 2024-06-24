@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7850F1632C294303001C949D /* UserOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F1622C294303001C949D /* UserOnboarding.swift */; };
 		78CAD7152C2835BE00DD087F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAD7142C2835BE00DD087F /* SignUpView.swift */; };
 		78CAD7172C28527900DD087F /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAD7162C28527900DD087F /* LoginViewModal.swift */; };
 		78F39A162C26C33C0096A6CB /* Adventure_ArchiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F39A152C26C33C0096A6CB /* Adventure_ArchiveApp.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7850F1622C294303001C949D /* UserOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboarding.swift; sourceTree = "<group>"; };
 		78CAD7142C2835BE00DD087F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		78CAD7162C28527900DD087F /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
 		78F39A122C26C33C0096A6CB /* Adventure Archive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Adventure Archive.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				78F39A552C2713310096A6CB /* WelcomeVIew.swift */,
 				78CAD7142C2835BE00DD087F /* SignUpView.swift */,
 				78CAD7162C28527900DD087F /* LoginViewModal.swift */,
+				7850F1622C294303001C949D /* UserOnboarding.swift */,
 			);
 			path = "Adventure Archive";
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7850F1632C294303001C949D /* UserOnboarding.swift in Sources */,
 				78CAD7172C28527900DD087F /* LoginViewModal.swift in Sources */,
 				78F39A182C26C33C0096A6CB /* ContentView.swift in Sources */,
 				78F39A1A2C26C33C0096A6CB /* Item.swift in Sources */,
