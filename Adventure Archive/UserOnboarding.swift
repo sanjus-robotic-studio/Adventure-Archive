@@ -102,7 +102,8 @@ struct UserOnboardingQ1: View {
     }
 }
 struct UserOnboardingQ2: View {
-    @State private var name = ""
+    @State private var duration = "Every Day"
+    let options = ["Every Day", "Every Week", "Rarely"]
     var body: some View {
         ZStack(){
             Color(hex: "#018894").ignoresSafeArea(.all)
@@ -117,41 +118,32 @@ struct UserOnboardingQ2: View {
                     Spacer()
                         .frame(height:40)
                     
-                    Text("What's your name?")
+                    Text("How often do you journal?")
                         .fontWeight(.heavy)
                         .font(.title)
                         .foregroundStyle(.white)
                     
-                    Spacer()
-                        .frame(height:10)
                     
-                    ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
-                        
-                        
-                        if name.isEmpty{
-                            Text("Name")
-                                .foregroundColor(.white)
-                                .font(.title3)
-                                .padding(.leading)
-                            
-                        }
-                        
-                        TextField("", text: $name)
-                            .font(.title3)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .shadow(color: Color.black.opacity(50), radius: 60)
-                            .cornerRadius(50)
-                            .foregroundStyle(.white)
-                            .overlay{
-                                RoundedRectangle(cornerRadius: 50)
-                                    .stroke(Color(.white))
-                                
+                   
+                    Picker("Select an option", selection: $duration) {
+                                ForEach(options, id: \.self) { option in
+                                    Text(option)
+                                        .fontWeight(.heavy)
+                                        .font(.title)
+                                        .foregroundStyle(.white)
+                                }
                             }
-                            .autocorrectionDisabled()
-                            .textInputAutocapitalization(.never)
+                    .pickerStyle(.wheel) // You can change the picker style if
+                               .padding()
+                               .foregroundColor(Color.white) // To make the text more visible
+                               .cornerRadius(10)
+                               .accentColor(.white)
+                               .font(.title)
+                               
+                              
+                    
                         
-                    })
+                        
                     
                     Spacer()
                         .frame(height:20)
@@ -181,9 +173,9 @@ struct UserOnboardingQ2: View {
                 }
                 VStack(alignment: .trailing){
                     HStack(alignment: .center){
-                        Image(systemName: "circle.fill")
-                            .foregroundStyle(.white)
                         Image(systemName: "circle")
+                            .foregroundStyle(.white)
+                        Image(systemName: "circle.fill")
                             .foregroundStyle(.white)
                         Image(systemName: "circle")
                             .foregroundStyle(.white)
@@ -199,5 +191,5 @@ struct UserOnboardingQ2: View {
             
 
 #Preview {
-    UserOnboardingQ1()
+    UserOnboardingQ2()
 }
